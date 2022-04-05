@@ -1,6 +1,7 @@
 export default class BasePage {
   porfolioUrl = '/portfolio';
   marketsUrl = '/markets';
+  depositsUrl = '/portfolio/deposit';
   connectVegaBtn = 'connect-vega-wallet';
   walletConnectors = 'connectors-list';
   walletForm = 'rest-connector-form';
@@ -17,6 +18,12 @@ export default class BasePage {
       .should('be.visible')
       .click({ force: true });
     cy.url().should('include', '/markets');
+  }
+
+  navigateToDeposit() {
+    cy.get(`a[href='${this.porfolioUrl}']`).click();
+    cy.get(`a[href='${this.depositsUrl}']`).click();
+    cy.url().should('include', '/portfolio/deposit');
   }
 
   navigateToConnectVegaWallet() {

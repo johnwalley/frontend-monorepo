@@ -107,18 +107,27 @@ export const Web3Content = ({
   const { isActive, error, connector, chainId } = useWeb3React();
 
   useEffect(() => {
-    if (connector?.connectEagerly) {
+    // @ts-ignore Cypress only on window object when running the Cypress app
+    const isCypress = window.Cypress || process.env['CYPRESS'];
+    if (connector?.connectEagerly && !isCypress) {
       connector.connectEagerly();
     }
   }, [connector]);
+
+  const disconnectButton = (
+    <Button
+      onClick={() => connector.deactivate()}
+      data-testid="ethereum-wallet-disconnect"
+    >
+      {t('Disconnect')}
+    </Button>
+  );
 
   if (error) {
     return (
       <SplashWrapper>
         <p className="mb-12">{t(`Something went wrong: ${error.message}`)}</p>
-        <Button onClick={() => connector.deactivate()}>
-          {t('Disconnect')}
-        </Button>
+        {disconnectButton}
       </SplashWrapper>
     );
   }
@@ -127,7 +136,12 @@ export const Web3Content = ({
     return (
       <SplashWrapper>
         <p className="mb-12">{t('Connect your Ethereum wallet')}</p>
-        <Button onClick={() => setDialogOpen(true)}>{t('Connect')}</Button>
+        <Button
+          onClick={() => setDialogOpen(true)}
+          data-testid="ethereum-wallet-connect"
+        >
+          {t('Connect')}
+        </Button>
       </SplashWrapper>
     );
   }
@@ -135,17 +149,15 @@ export const Web3Content = ({
   if (chainId !== appChainId) {
     return (
       <SplashWrapper>
-        <p className="mb-12">
+        <p className="mb-12" data-testid="wrong-chain-message">
           {t(`This app only works on chain ID: ${appChainId}`)}
         </p>
-        <Button onClick={() => connector.deactivate()}>
-          {t('Disconnect')}
-        </Button>
+        {disconnectButton}
       </SplashWrapper>
     );
   }
 
-  return <>{children}</>;
+  return <div data-testid="ethereum-active">{children}</div>;
 };
 
 interface SplashWrapperProps {
@@ -155,7 +167,9 @@ interface SplashWrapperProps {
 const SplashWrapper = ({ children }: SplashWrapperProps) => {
   return (
     <Splash>
-      <div className="text-center">{children}</div>
+      <div className="text-center" data-testid="ethereum-splash">
+        {children}
+      </div>
     </Splash>
   );
 };

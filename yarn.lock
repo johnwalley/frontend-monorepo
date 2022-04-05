@@ -1614,6 +1614,15 @@
     "@ethersproject/properties" "^5.6.0"
     "@ethersproject/transactions" "^5.6.0"
 
+"@ethersproject/experimental@^5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@ethersproject/experimental/-/experimental-5.6.0.tgz#c72ef00a79b746c522eb79736712169d71c55f64"
+  integrity sha512-lSEM/6t+BicbeyRxat5meoQhXZLoBEziVrxZqeCIhsPntvq4DlMobPBKXF0Iz3m0dMvl9uga7fHEO4YD9SgCgw==
+  dependencies:
+    "@ethersproject/web" "^5.6.0"
+    ethers "^5.6.0"
+    scrypt-js "3.0.1"
+
 "@ethersproject/hash@5.6.0", "@ethersproject/hash@^5.6.0":
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/@ethersproject/hash/-/hash-5.6.0.tgz#d24446a5263e02492f9808baa99b6e2b4c3429a2"
@@ -6106,6 +6115,13 @@
   optionalDependencies:
     "@ethersproject/providers" "^5.6.0"
 
+"@web3-react/eip1193@8.0.0-beta.0":
+  version "8.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@web3-react/eip1193/-/eip1193-8.0.0-beta.0.tgz#ffe19aaf28506769db4bceb1b829861de4f6bd7a"
+  integrity sha512-iw4mmhv0TCKuCo7bmYZBSpc12/tuK4NfEdQIjv5djXnzkInmsS/xc46WFmYLmBkbyDylhxW83re1gbS1Hwa47w==
+  dependencies:
+    "@web3-react/types" "^8.0.0-beta.0"
+
 "@web3-react/metamask@8.0.16-beta.0":
   version "8.0.16-beta.0"
   resolved "https://registry.yarnpkg.com/@web3-react/metamask/-/metamask-8.0.16-beta.0.tgz#66ec1131a0d09774ebdb9e9a98aba8c70e39ae74"
@@ -6122,6 +6138,13 @@
     "@ethersproject/address" "^5.6.0"
     "@web3-react/types" "^8.0.10-beta.0"
     zustand "^4.0.0-beta.2"
+
+"@web3-react/types@^8.0.0-beta.0":
+  version "8.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@web3-react/types/-/types-8.0.0-beta.0.tgz#40f686702a24d04db75a27759d3ff378ec982220"
+  integrity sha512-6yVwgf+zOt2/o6l0DeZXJcKV/85rcafS3MSLk8c2l98Jw8THc+ZyOeLWb0TUBzj7rc5v+PoKz4Fs2wsf8LOJew==
+  dependencies:
+    zustand "^4.0.0-beta.0"
 
 "@web3-react/types@^8.0.10-beta.0":
   version "8.0.10-beta.0"
@@ -21066,7 +21089,7 @@ zen-observable@0.8.15, zen-observable@^0.8.0:
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.15.tgz#96415c512d8e3ffd920afd3889604e30b9eaac15"
   integrity sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
 
-zustand@^4.0.0-beta.2:
+zustand@^4.0.0-beta.0, zustand@^4.0.0-beta.2:
   version "4.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/zustand/-/zustand-4.0.0-beta.2.tgz#27fdc32b62225cc18976c0cf8866ecee9a9f4a98"
   integrity sha512-aJ5ypnOwPIa/uSjdZv/oHChTWPplpFOG/hvWwzkR5ahFiPI5R6ifyObf8Fz1Vi6Obz2wY1N32fT2pNrpT2hzPw==

@@ -15,6 +15,7 @@
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@blueprintjs/icons": "^3.32.0",
+    "@ethersproject/experimental": "^5.6.0",
     "@nrwl/next": "13.8.1",
     "@radix-ui/react-dialog": "^0.1.5",
     "@radix-ui/react-tabs": "^0.1.5",
@@ -28,6 +29,7 @@
     "@vegaprotocol/vegawallet-service-api-client": "^0.4.6",
     "@walletconnect/ethereum-provider": "^1.7.5",
     "@web3-react/core": "8.0.20-beta.0",
+    "@web3-react/eip1193": "8.0.0-beta.0",
     "@web3-react/metamask": "8.0.16-beta.0",
     "@web3-react/walletconnect": "^8.0.23-beta.0",
     "ag-grid-community": "^27.0.1",
