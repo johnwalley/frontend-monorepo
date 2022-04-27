@@ -57,7 +57,7 @@ function App() {
                   <div className="md:w-4/5 lg:w-3/5 xl:w-1/3 mx-auto">
                     <DealTicketContainer
                       marketId={
-                        '0c3c1490db767f926d24fb674b4235a9aa339614915a4ab96cbfc0e1ad83c0ff'
+                        'c06b5542704323949df33a03da426d8d76a01ee21ed732c67e5d2ef46a7c8e9a'
                       }
                     />
                   </div>

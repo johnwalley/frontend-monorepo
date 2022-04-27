@@ -16,6 +16,8 @@ export const TendermintWebsocketProvider = ({
   const [socketUrl] = useState(DATA_SOURCES.tendermintWebsocketUrl);
   const contextShape = useWebSocket(socketUrl);
 
+  console.log(contextShape)
+
   if (!contextShape) {
     return (
       <Splash>
