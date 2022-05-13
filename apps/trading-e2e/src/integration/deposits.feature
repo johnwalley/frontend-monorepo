@@ -89,7 +89,6 @@ Feature: Deposits to vega wallet
       | amount | 788888888888888                                                  |
     And I submit the form
     And Insufficient amount message shown
-  # Then Amount too small message shown
   # And I enter a valid amount
   # And I submit the form
   # This next step is being skipped due to account having approved status
